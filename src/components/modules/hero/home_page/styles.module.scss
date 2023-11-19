@@ -1,0 +1,25 @@
+.homeHero {
+	position: relative;
+	overflow: hidden;
+	height: 25rem;
+	border-bottom: 4px solid #b40101;
+
+	.row {
+		height: 100%;
+		justify-content: right;
+		align-items: center;
+		.kim_headshot {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+		}
+	}
+	.slideshow_container {
+		position: absolute;
+		width: 100%;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		z-index: -1;
+	}
+}

@@ -1,0 +1,12 @@
+header {
+	border-bottom: 4px solid #b40101;
+	&.default {
+		height: 4rem;
+
+		.row {
+			height: 100%;
+			justify-content: space-around;
+			align-items: center;
+		}
+	}
+}

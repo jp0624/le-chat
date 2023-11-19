@@ -1,0 +1,38 @@
+.default {
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition: all 0.1s ease-in-out;
+	border-bottom: 0px solid transparent;
+	&:hover {
+		border-bottom: 2px solid #828282;
+	}
+	&.active {
+		border-bottom: 2px solid #b40101;
+	}
+}
+.btn {
+	text-decoration: none;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding: 0.5rem 1rem;
+	transition: all 0.1s ease-in-out;
+	&_red {
+		background-color: #b40101;
+		color: #fff;
+		&:hover {
+			background-color: #890000;
+		}
+	}
+}
+.icon {
+	height: 1.5rem;
+	width: 1.5rem;
+	display: inline-block;
+	background-size: cover;
+	margin: 0 1rem 0 0;
+	&_live_chat {
+		background-image: url('./assets/images/icons/live-chat-white.svg');
+	}
+}

@@ -1,0 +1,43 @@
+.registration_container {
+	h2 {
+		width: 100%;
+		font-weight: 400;
+	}
+	form {
+		display: flex;
+		flex-direction: row;
+		.form_group {
+			padding: 0 0.5rem;
+		}
+	}
+	.register_types {
+		width: 100%;
+		text-align: center;
+		label {
+			cursor: pointer;
+			padding: 0.25rem 0.5rem;
+			background-color: #828282;
+			color: #fff;
+			text-transform: uppercase;
+			margin: 0.5rem;
+			display: inline-block;
+			position: relative;
+			transition: all 0.1s ease-in-out;
+			&:hover {
+				background-color: #494949;
+			}
+			&.active {
+				background: #b40101;
+				&:hover {
+					background-color: #890000;
+				}
+			}
+			input {
+				display: inline-block;
+			}
+			span {
+				padding: 0 0.5rem;
+			}
+		}
+	}
+}

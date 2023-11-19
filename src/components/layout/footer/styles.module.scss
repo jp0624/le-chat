@@ -1,0 +1,13 @@
+footer {
+	&.default {
+		margin-top: auto;
+		border-top: 4px solid #828282;
+		.copyright {
+			text-transform: uppercase;
+			height: 100%;
+			justify-content: space-around;
+			align-items: center;
+			display: flex;
+		}
+	}
+}
