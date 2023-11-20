@@ -41,6 +41,24 @@ p {
 	flex-basis: 100%;
 	height: 0;
 }
+.slideshow-text {
+	position: absolute;
+	top: 40%;
+	left: 58%;
+	transform: translate(-50%, -50%);
+	font-size: 2rem;
+	font-weight: 900;
+	margin: 1rem 0;
+	&.white {
+		color: rgb(255, 255, 255);
+		text-shadow: 0 1px 2px #000;
+	}
+	&.black {
+		color: rgb(0, 0, 0);
+		text-shadow: 0 1px 2px #fff;
+	}
+}
+
 form {
 	width: 100%;
 }
@@ -49,13 +67,13 @@ input[type='email'],
 input[type='phone'],
 textarea {
 	height: 3rem;
-	padding: 0 5rem 0 1rem;
+	padding: 0 1rem;
 	outline: 0;
 }
 textarea {
 	padding: 1rem;
 	width: 100%;
-	height: 10rem;
+	height: 9.5rem;
 }
 input[type='submit'] {
 	cursor: pointer;
@@ -63,7 +81,7 @@ input[type='submit'] {
 	background-color: #b40101;
 	color: #fff;
 	border: 0;
-	padding: 0.5rem 2rem;
+	padding: 1.25rem 2rem;
 	margin: 1rem;
 	transition: all 0.1s ease-in-out;
 	&:hover {

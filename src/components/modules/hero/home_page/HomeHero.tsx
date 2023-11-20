@@ -4,8 +4,16 @@ import styles from './styles.module.scss'
 
 function HomeHero() {
 	const SlideShowImages = [
-		{ url: './assets/images/slideshow/image-01.jpg', caption: 'image 01' },
-		{ url: './assets/images/slideshow/image-02.jpg', caption: 'image 02' },
+		{
+			url: './assets/images/slideshow/image-01.jpg',
+			caption: 'New & Pre-Construction Condos',
+			color: 'white',
+		},
+		{
+			url: './assets/images/slideshow/image-02.jpg',
+			caption: 'New & Pre-Construction Condos for Sale & Lease',
+			color: 'black',
+		},
 	]
 	return (
 		<>
@@ -15,9 +23,7 @@ function HomeHero() {
 						className={`${styles.kim_headshot}`}
 						src='./assets/images/layout/kim-lg.png'
 					/>
-					<PropertySearch
-						intro={'New & Pre-Construction Condos for Sale & Lease'}
-					/>
+					<PropertySearch />
 				</div>
 				<div className={`${styles.slideshow_container}`}>
 					<SlideShow images={SlideShowImages} duration={2000} />

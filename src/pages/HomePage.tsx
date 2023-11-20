@@ -1,4 +1,5 @@
 import RegisterForm from '../components/forms/register/RegisterForm'
+import AwardsSection from '../components/modules/awards/awards'
 import HomeHero from '../components/modules/hero/home_page/HomeHero'
 // import styles from './styles.module.scss'
 
@@ -17,11 +18,7 @@ const HomePage = () => {
 					<p>Properties List</p>
 				</div>
 			</div>
-			<div className={`awards_container`}>
-				<div className={`row`}>
-					<p>Awards</p>
-				</div>
-			</div>
+			<AwardsSection />
 		</>
 	)
 }

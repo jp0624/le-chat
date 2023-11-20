@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import styles from './styles.module.scss'
 
-function PropertySearch({ intro = '' }) {
+function PropertySearch() {
 	const [searchType, setSearchType] = useState('search_buy')
 
 	const searchTypes = ['buy', 'lease']
@@ -12,7 +12,7 @@ function PropertySearch({ intro = '' }) {
 	return (
 		<>
 			<div className={`${styles.search_container}`}>
-				{intro.length > 0 && <p>{intro}</p>}
+				{/* {intro.length > 0 && <p>{intro}</p>} */}
 				<form>
 					<input
 						className={`${styles.search_value}`}
@@ -38,50 +38,6 @@ function PropertySearch({ intro = '' }) {
 								<span>{type}</span>
 							</label>
 						))}
-						{/* <label
-							htmlFor={'search_buy'}
-							className={`${searchType === 'search_buy' && styles.active}`}
-						>
-							<input
-								onChange={() => toggleRadio('search_buy')}
-								type='radio'
-								id='search_buy'
-								name='search_type'
-								value='buy'
-								checked={searchType === 'search_buy' && true}
-							/>
-							<span>Buy</span>
-						</label>
-						<label
-							htmlFor={'search_lease'}
-							className={`${searchType === 'search_lease' && styles.active}`}
-						>
-							<input
-								onChange={() => toggleRadio('search_lease')}
-								type='radio'
-								id='search_lease'
-								name='search_type'
-								value='lease'
-								checked={searchType === 'search_lease' && true}
-							/>
-							<span>Lease</span>
-						</label>
-						<label
-							htmlFor={'search_commercial'}
-							className={`${
-								searchType === 'search_commercial' && styles.active
-							}`}
-						>
-							<input
-								onChange={() => toggleRadio('search_commercial')}
-								type='radio'
-								id='search_commercial'
-								name='search_type'
-								value='commercial'
-								checked={searchType === 'search_commercial' && true}
-							/>
-							<span>Commercial</span>
-						</label> */}
 					</div>
 					<input
 						type='submit'
