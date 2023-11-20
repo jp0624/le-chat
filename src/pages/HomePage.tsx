@@ -1,5 +1,5 @@
 import RegisterForm from '../components/forms/register/RegisterForm'
-import AwardsSection from '../components/modules/awards/awards'
+import AwardsSection from '../components/modules/awards/Awards'
 import HomeHero from '../components/modules/hero/home_page/HomeHero'
 // import styles from './styles.module.scss'
 
