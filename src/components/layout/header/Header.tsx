@@ -5,7 +5,9 @@ import styles from './styles.module.scss'
 const Header = () => {
 	return (
 		<>
-			<header className={`${styles.default} bg_klc bg_klc_black`}>
+			<header
+				className={`header_default ${styles.default} bg_klc bg_klc_black`}
+			>
 				<div className={`row ${styles.row}`}>
 					<Logo />
 					<TopNav />

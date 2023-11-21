@@ -17,7 +17,7 @@ function HomeHero() {
 	]
 	return (
 		<>
-			<div className={`${styles.homeHero}`}>
+			<section className={`hero_container_home ${styles.hero_container_home}`}>
 				<div className={`row ${styles.row}`}>
 					<img
 						className={`${styles.kim_headshot}`}
@@ -28,7 +28,7 @@ function HomeHero() {
 				<div className={`${styles.slideshow_container}`}>
 					<SlideShow images={SlideShowImages} duration={2000} />
 				</div>{' '}
-			</div>
+			</section>
 		</>
 	)
 }

@@ -3,7 +3,7 @@ import styles from './styles.module.scss'
 function AwardsSection() {
 	return (
 		<>
-			<div className={`${styles.awards_container}`}>
+			<section className={`awards_container ${styles.awards_container}`}>
 				<div className={`${styles.row} row`}>
 					<h2>Awards & Achievements</h2>
 					<p>
@@ -21,7 +21,7 @@ function AwardsSection() {
 						</div>
 					</div>
 				</div>
-			</div>
+			</section>
 		</>
 	)
 }

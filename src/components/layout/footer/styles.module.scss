@@ -33,9 +33,63 @@ footer {
 					.contactList {
 						text-align: left;
 						font-size: 1.25rem;
+						list-style: none;
+						margin: 0;
+						padding: 0;
 						li {
+							position: relative;
 							line-height: 2.5rem;
 							padding-left: 3rem;
+							display: flex;
+							flex-direction: row;
+							align-items: center;
+							a {
+								color: white;
+								text-decoration: none;
+								&:hover {
+									text-decoration: underline;
+								}
+							}
+
+							i {
+								position: relative;
+								display: flex;
+								justify-content: center;
+								align-items: center;
+								height: 20px;
+								width: 20px;
+								background: white;
+								border-radius: 50%;
+								margin-right: 1rem;
+								&:before {
+									content: '';
+									top: 0;
+									left: 0;
+									height: 10px;
+									width: 10px;
+									display: block;
+									position: relative;
+									-webkit-mask-size: cover;
+									mask-size: cover;
+									background-color: #b40101;
+								}
+							}
+							&.phone {
+								i {
+									&:before {
+										-webkit-mask-image: url('/assets/images/icons/icon-phone.svg');
+										mask-image: url('/assets/images/icons/icon-phone.svg');
+									}
+								}
+							}
+							&.email {
+								i {
+									&:before {
+										-webkit-mask-image: url('/assets/images/icons/icon-envelope.svg');
+										mask-image: url('/assets/images/icons/icon-envelope.svg');
+									}
+								}
+							}
 						}
 					}
 				}

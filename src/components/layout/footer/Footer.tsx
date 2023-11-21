@@ -4,7 +4,7 @@ import styles from './styles.module.scss'
 const Footer = () => {
 	return (
 		<>
-			<footer className={`${styles.default}`}>
+			<footer className={`footer_default ${styles.default}`}>
 				<div className={`${styles.bottom_nav} bg_klc bg_klc_red`}>
 					<div className={`row ${styles.row}`}>
 						<div className={`col ${styles.col} ${styles.col_1}`}>
@@ -23,8 +23,22 @@ const Footer = () => {
 								</figure>
 							</div>
 							<ul className={`contactList ${styles.contactList}`}>
-								<li className={`phone ${styles.phone}`}>(647) 273-4575</li>
-								<li className={`email ${styles.email}`}>kimlechat@kw.com </li>
+								<li className={`phone ${styles.phone}`}>
+									<i></i>
+									<span>
+										<a href='tel:&#054;&#052;&#055;&#045;&#050;&#055;&#051;&#045;&#052;&#053;&#055;&#053;'>
+											(&#054;&#052;&#055;)&#032;&#050;&#055;&#051;&#045;&#052;&#053;&#055;&#053;
+										</a>
+									</span>
+								</li>
+								<li className={`email ${styles.email}`}>
+									<i></i>
+									<span>
+										<a href='mailto:&#107;&#105;&#109;&#108;&#101;&#099;&#104;&#097;&#116;&#064;&#107;&#119;&#046;&#099;&#111;&#109;'>
+											&#107;&#105;&#109;&#108;&#101;&#099;&#104;&#097;&#116;&#064;&#107;&#119;&#046;&#099;&#111;&#109;
+										</a>
+									</span>
+								</li>
 							</ul>
 						</div>
 						<div className={`col ${styles.col} ${styles.col_2}`}>

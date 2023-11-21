@@ -1,23 +1,20 @@
-import RegisterForm from '../components/forms/register/RegisterForm'
-import AwardsSection from '../components/modules/awards/Awards'
-import HomeHero from '../components/modules/hero/home_page/HomeHero'
+import AwardsSection from '../components/sections/awards/Awards'
+import HomeHero from '../components/sections/hero/home_page/HomeHero'
+import PropertiesList from '../components/sections/properties/properties_list/PropertiesList'
+import RegistrationSection from '../components/sections/registration/Registration'
 // import styles from './styles.module.scss'
 
 const HomePage = () => {
 	return (
 		<>
 			<HomeHero />
-			<div className={`featured_container`}>
+			<section className={`featured_container`}>
 				<div className={`row`}>
 					<p>Featured Properties</p>
 				</div>
-			</div>
-			<RegisterForm />
-			<div className={`properties_container`}>
-				<div className={`row`}>
-					<p>Properties List</p>
-				</div>
-			</div>
+			</section>
+			<RegistrationSection />
+			<PropertiesList />
 			<AwardsSection />
 		</>
 	)
