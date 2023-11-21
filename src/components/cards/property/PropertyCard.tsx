@@ -1,7 +1,7 @@
 import styles from './styles.module.scss'
-import { Property_Interface } from '../../../interfaces/property'
+// import { Property_Interface } from '../../../interfaces/property'
 
-function PropertyCard({ property }) {
+function PropertyCard({ property }: any) {
 	console.log('property: ', property)
 	return (
 		<>

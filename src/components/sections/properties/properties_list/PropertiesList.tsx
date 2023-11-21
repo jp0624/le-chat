@@ -1,6 +1,6 @@
 import PropertyCard from '../../../cards/property/PropertyCard'
 import styles from './styles.module.scss'
-import { Property_Interface } from '../../../../interfaces/property'
+// import { Property_Interface } from '../../../../interfaces/property'
 
 function PropertiesList() {
 	const properties = [
