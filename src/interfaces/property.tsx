@@ -24,14 +24,15 @@ export type Building_Interface = {
 export type Property_Interface = {
 	images?: string[]
 	headline: string
-	sold_by_title?: string
-	sold_by?: string
+	listing_type?: string
+	listing_by_title?: string
+	listing_by?: string
 	address?: string
 	city?: string
 	province?: string
 	postal_code?: string
 	price_title?: string
-	price?: number
+	price: number
 	move_in_date?: string
 	description?: string
 	summary?: Summary_Interface

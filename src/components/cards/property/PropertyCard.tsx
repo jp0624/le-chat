@@ -1,10 +1,20 @@
 import styles from './styles.module.scss'
 import { Property_Interface } from '../../../interfaces/property'
 
-function PropertyCard(property: Property_Interface) {
+function PropertyCard({ property }) {
+	console.log('property: ', property)
 	return (
 		<>
-			<div className={`${styles.default}`}>{property.headline}</div>
+			<div
+				className={`card card_property ${styles.card} ${styles.card_property}`}
+			>
+				<figure>
+					<img src={`${property.images[0]}`} />
+				</figure>
+				{property.headline}
+				{property.listing_type !== '' && property.listing_type}
+				{property.price}
+			</div>
 		</>
 	)
 }

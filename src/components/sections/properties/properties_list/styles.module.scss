@@ -1,0 +1,13 @@
+.registration_container {
+	ul {
+		display: grid;
+		grid-template-columns: auto auto auto;
+		gap: 1em;
+		list-style: none;
+		padding: 0;
+		margin: 2rem 0;
+		li {
+			width: 100%;
+		}
+	}
+}
