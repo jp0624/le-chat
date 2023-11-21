@@ -4,7 +4,7 @@ import { Property_Interface } from '../../../interfaces/property'
 function PropertyCard(property: Property_Interface) {
 	return (
 		<>
-			<pre>{property.headline}</pre>
+			<div className={`${styles.default}`}>{property.headline}</div>
 		</>
 	)
 }
