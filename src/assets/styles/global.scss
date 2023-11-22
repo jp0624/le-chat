@@ -131,14 +131,14 @@ input[type='submit'] {
 	&_red {
 		background-color: #b40101;
 		&:before {
-			background-image: url('./assets/images/backgrounds/klc-white.png');
+			background-image: url('/assets/images/backgrounds/klc-white.png');
 			opacity: 0.25;
 		}
 	}
 	&_black {
 		background-color: black;
 		&:before {
-			background-image: url('./assets/images/backgrounds/klc-white.png');
+			background-image: url('/assets/images/backgrounds/klc-white.png');
 			opacity: 0.15;
 		}
 	}
