@@ -24,6 +24,8 @@ export type Building_Interface = {
 export type Property_Interface = {
 	images?: string[]
 	headline: string
+	featured: boolean
+	featured_title: string
 	listing_type?: string
 	listing_by_title?: string
 	listing_by?: string
