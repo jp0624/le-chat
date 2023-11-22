@@ -170,7 +170,7 @@ function PropertiesList() {
 			province: 'ON',
 			postal_code: 'M4Y 1T5',
 			price_title: 'Asking price',
-			price: 500000,
+			price: '500,000/month',
 			move_in_date: 'Dec 1st',
 			description:
 				'Beautiful & Spacious 4 Bedrooms End unit Townhouse W/Walk-Out Basement *North-Facing* Backing On To Ravine * Feels Like A Semi-Detach. Great Layout, Separate Fm & Liv. Rm, Bright & Spacious Kitchen W/Granite Counter Top, S/S Appliances. 4 Good Size Bdrms. Master Brm W/5Pc-Ensuite W/I Closet. Laminate Floors, Ent. From Garage To Inside Home, No Sidewalk ,Child Safe Road . Close To School, Plaza & Public Transit..',
@@ -186,8 +186,6 @@ function PropertiesList() {
 				listed_time: '26 minutes',
 			},
 			building: {
-				bedrooms: 4,
-				bathrooms: 3,
 				interior_features: {
 					basement_features: 'Walk out',
 					basement_type: 'N/A (Unfinished)',

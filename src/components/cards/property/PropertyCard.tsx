@@ -35,7 +35,7 @@ function PropertyCard({ property }: any) {
 						{property.building && property.building.bedrooms && (
 							<li
 								className={`features_list_bedrooms ${styles.features_list_bedrooms}`}
-								title={`Bedrooms`}
+								title={`${property.building.bedrooms} Bedrooms`}
 							>
 								<i
 									className={`icon icon_circle icon_bedroom ${styles.icon_bedroom}`}
@@ -50,7 +50,7 @@ function PropertyCard({ property }: any) {
 						{property.building && property.building.bathrooms && (
 							<li
 								className={`features_list_bathrooms ${styles.features_list_bathrooms}`}
-								title={`Bathrooms`}
+								title={`${property.building.bathrooms} Bathrooms`}
 							>
 								<i
 									className={`icon icon_circle icon_bathroom ${styles.icon_bathroom}`}
@@ -65,7 +65,7 @@ function PropertyCard({ property }: any) {
 						{property.building && property.building.parking && (
 							<li
 								className={`features_list_parking ${styles.features_list_parking}`}
-								title={`Parking Spaces`}
+								title={`${property.building.parking} Parking Spaces`}
 							>
 								<i
 									className={`icon icon_circle icon_parking ${styles.icon_parking}`}
