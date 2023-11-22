@@ -2,6 +2,8 @@
 	border: 1px solid rgba(144, 144, 144, 1);
 	background-color: white;
 	width: 100%;
+	text-align: left;
+	cursor: pointer;
 	figure {
 		width: 100%;
 		margin: 0;
@@ -14,6 +16,77 @@
 	&:hover {
 		img {
 			transform: scale(105%);
+		}
+	}
+	&_details {
+		width: 100%;
+		padding: 1rem;
+		h3,
+		h4 {
+			margin: 0.25rem 0;
+		}
+		h4 {
+			color: #b40101;
+		}
+		a {
+			text-decoration: none;
+			color: #b40101;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+		p {
+			text-overflow: ellipsis;
+			display: -webkit-box;
+			-webkit-line-clamp: 3;
+			-webkit-box-orient: vertical;
+			overflow: hidden;
+		}
+		.features_list {
+			margin: 2rem;
+			display: flex;
+			list-style: none;
+			margin: 1em 0;
+			li {
+				display: flex;
+				justify-content: left;
+				align-content: center;
+				margin: 0;
+				padding-left: 0.5em;
+				span {
+					font-size: 1.5rem;
+					color: #b40101;
+				}
+			}
+			i {
+				display: inline-flex;
+				height: 36px;
+				width: 36px;
+				background-color: #b40101;
+				&:before {
+					height: 20px;
+					width: 20px;
+					background-color: #fff;
+				}
+				&.icon_bedroom {
+					&:before {
+						-webkit-mask-image: url('/assets/images/icons/icon-bedroom.svg');
+						mask-image: url('/assets/images/icons/icon-bedroom.svg');
+					}
+				}
+				&.icon_bathroom {
+					&:before {
+						-webkit-mask-image: url('/assets/images/icons/icon-bathroom.svg');
+						mask-image: url('/assets/images/icons/icon-bathroom.svg');
+					}
+				}
+				&.icon_parking {
+					&:before {
+						-webkit-mask-image: url('/assets/images/icons/icon-car.svg');
+						mask-image: url('/assets/images/icons/icon-car.svg');
+					}
+				}
+			}
 		}
 	}
 }

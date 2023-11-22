@@ -33,8 +33,8 @@ function PropertiesList() {
 				listed_time: '26 minutes',
 			},
 			building: {
-				bedrooms: { above_grade: 4 },
-				bathrooms: { total: 3 },
+				bedrooms: 4,
+				bathrooms: 3,
 				interior_features: {
 					basement_features: 'Walk out',
 					basement_type: 'N/A (Unfinished)',
@@ -53,10 +53,7 @@ function PropertiesList() {
 				neighbourhood_features: {
 					amenities_nearby: 'Hospital, Park, Place of Worship, Public Transit',
 				},
-				parking: {
-					type: 'Garage',
-					spaces: 2,
-				},
+				parking: 2,
 			},
 		},
 		{
@@ -88,8 +85,8 @@ function PropertiesList() {
 				listed_time: '26 minutes',
 			},
 			building: {
-				bedrooms: { above_grade: 4 },
-				bathrooms: { total: 3 },
+				bedrooms: 4,
+				bathrooms: 3,
 				interior_features: {
 					basement_features: 'Walk out',
 					basement_type: 'N/A (Unfinished)',
@@ -107,10 +104,6 @@ function PropertiesList() {
 				},
 				neighbourhood_features: {
 					amenities_nearby: 'Hospital, Park, Place of Worship, Public Transit',
-				},
-				parking: {
-					type: 'Garage',
-					spaces: 2,
 				},
 			},
 		},
@@ -141,8 +134,8 @@ function PropertiesList() {
 				listed_time: '26 minutes',
 			},
 			building: {
-				bedrooms: { above_grade: 4 },
-				bathrooms: { total: 3 },
+				bedrooms: 4,
+				bathrooms: 3,
 				interior_features: {
 					basement_features: 'Walk out',
 					basement_type: 'N/A (Unfinished)',
@@ -161,10 +154,7 @@ function PropertiesList() {
 				neighbourhood_features: {
 					amenities_nearby: 'Hospital, Park, Place of Worship, Public Transit',
 				},
-				parking: {
-					type: 'Garage',
-					spaces: 2,
-				},
+				parking: 2,
 			},
 		},
 		{
@@ -196,8 +186,8 @@ function PropertiesList() {
 				listed_time: '26 minutes',
 			},
 			building: {
-				bedrooms: { above_grade: 4 },
-				bathrooms: { total: 3 },
+				bedrooms: 4,
+				bathrooms: 3,
 				interior_features: {
 					basement_features: 'Walk out',
 					basement_type: 'N/A (Unfinished)',
@@ -216,10 +206,7 @@ function PropertiesList() {
 				neighbourhood_features: {
 					amenities_nearby: 'Hospital, Park, Place of Worship, Public Transit',
 				},
-				parking: {
-					type: 'Garage',
-					spaces: 2,
-				},
+				parking: 2,
 			},
 		},
 	]

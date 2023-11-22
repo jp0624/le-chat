@@ -24,7 +24,9 @@ const Footer = () => {
 							</div>
 							<ul className={`contactList ${styles.contactList}`}>
 								<li className={`phone ${styles.phone}`}>
-									<i></i>
+									<i
+										className={`icon icon_circle icon_phone ${styles.icon_phone}`}
+									></i>
 									<span>
 										<a href='tel:&#054;&#052;&#055;&#045;&#050;&#055;&#051;&#045;&#052;&#053;&#055;&#053;'>
 											(&#054;&#052;&#055;)&#032;&#050;&#055;&#051;&#045;&#052;&#053;&#055;&#053;
@@ -32,7 +34,9 @@ const Footer = () => {
 									</span>
 								</li>
 								<li className={`email ${styles.email}`}>
-									<i></i>
+									<i
+										className={`icon icon_circle icon_email ${styles.icon_email}`}
+									></i>
 									<span>
 										<a href='mailto:&#107;&#105;&#109;&#108;&#101;&#099;&#104;&#097;&#116;&#064;&#107;&#119;&#046;&#099;&#111;&#109;'>
 											&#107;&#105;&#109;&#108;&#101;&#099;&#104;&#097;&#116;&#064;&#107;&#119;&#046;&#099;&#111;&#109;

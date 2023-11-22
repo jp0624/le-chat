@@ -1,7 +1,7 @@
 .registration_container {
-	ul {
+	ul.card_list {
 		display: grid;
-		grid-template-columns: auto auto auto;
+		grid-template-columns: 33% 33% 33%;
 		gap: 1em;
 		list-style: none;
 		padding: 0;
