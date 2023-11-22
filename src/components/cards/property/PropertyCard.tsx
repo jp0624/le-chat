@@ -35,31 +35,46 @@ function PropertyCard({ property }: any) {
 						{property.building && property.building.bedrooms && (
 							<li
 								className={`features_list_bedrooms ${styles.features_list_bedrooms}`}
+								title={`Bedrooms`}
 							>
 								<i
 									className={`icon icon_circle icon_bedroom ${styles.icon_bedroom}`}
 								></i>
-								<span>{property.building.bedrooms}</span>
+								<span>
+									<em>{property.building.bedrooms}</em>
+									<br />
+									Bedrooms
+								</span>
 							</li>
 						)}
 						{property.building && property.building.bathrooms && (
 							<li
 								className={`features_list_bathrooms ${styles.features_list_bathrooms}`}
+								title={`Bathrooms`}
 							>
 								<i
 									className={`icon icon_circle icon_bathroom ${styles.icon_bathroom}`}
 								></i>
-								<span>{property.building.bathrooms}</span>
+								<span>
+									<em>{property.building.bathrooms}</em>
+									<br />
+									Bathrooms
+								</span>
 							</li>
 						)}
 						{property.building && property.building.parking && (
 							<li
 								className={`features_list_parking ${styles.features_list_parking}`}
+								title={`Parking Spaces`}
 							>
 								<i
 									className={`icon icon_circle icon_parking ${styles.icon_parking}`}
 								></i>
-								<span>{property.building.parking}</span>
+								<span>
+									<em>{property.building.parking}</em>
+									<br />
+									Parking
+								</span>
 							</li>
 						)}
 					</ul>

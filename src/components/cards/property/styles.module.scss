@@ -52,15 +52,28 @@
 			display: flex;
 			list-style: none;
 			margin: 1em 0;
+			padding: 0;
 			li {
 				display: flex;
-				justify-content: left;
+				justify-content: center;
 				align-content: center;
 				margin: 0;
-				padding-left: 0.5em;
+				// padding-left: 0.5em;
+				padding: 0 0.5rem;
+				&:first {
+					padding-left: 0;
+				}
+				&:last {
+					padding-right: 0;
+				}
 				span {
-					font-size: 1.5rem;
-					color: #b40101;
+					font-size: 0.75rem;
+					text-align: center;
+					em {
+						font-style: normal;
+						color: #b40101;
+						font-size: 1.5rem;
+					}
 				}
 			}
 			i {
