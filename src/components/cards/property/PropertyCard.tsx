@@ -1,12 +1,10 @@
 import styles from './styles.module.scss'
-// import { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { RootState } from '../../../state/store'
 import { toggleFavorite } from '../../../state/property_favorites/PropertyFavoritesSlice'
 // import { Property_Interface } from '../../../interfaces/property'
 
 function PropertyCard({ property }: any) {
-	// const [favorited, setFavorited] = useState(false)
 	function numberWithCommas(x: number) {
 		return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
 	}
@@ -32,7 +30,7 @@ function PropertyCard({ property }: any) {
 				>
 					<div
 						className={`property_favorite ${styles.property_favorite} `}
-						onClick={() => dispatch(toggleFavorite(property.id))} //setFavorited(favorited ? false : true)}
+						onClick={() => dispatch(toggleFavorite(property.id))}
 						title={`${
 							favorites.includes(property.id) && styles.favorited
 								? 'Click to Remove from Favorites'
