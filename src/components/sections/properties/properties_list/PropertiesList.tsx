@@ -1,219 +1,18 @@
 import PropertyCard from '../../../cards/property/PropertyCard'
 import styles from './styles.module.scss'
+
+import { usePropertyData } from '../../../../data/PropertyData/PropertyDataContext'
 // import { Property_Interface } from '../../../../interfaces/property'
 
 function PropertiesList() {
-	const properties = [
-		{
-			id: 1,
-			images: ['/assets/images/temp/temp-property-02.jpg'],
-			headline: 'Reside on Richmond1',
-			featured: true,
-			featured_title: 'Platinum Access',
-			listing_type: 'sale',
-			listing_by_title: 'Development by:',
-			listing_by: 'Owner',
-			address: '123 Main St',
-			city: 'Toronto',
-			province: 'ON',
-			postal_code: 'M4Y 1T5',
-			price_title: 'Asking price',
-			price: 500000,
-			move_in_date: 'Dec 1st',
-			description:
-				'Beautiful & Spacious 4 Bedrooms End unit Townhouse W/Walk-Out Basement *North-Facing* Backing On To Ravine * Feels Like A Semi-Detach. Great Layout, Separate Fm & Liv. Rm, Bright & Spacious Kitchen W/Granite Counter Top, S/S Appliances. 4 Good Size Bdrms. Master Brm W/5Pc-Ensuite W/I Closet. Laminate Floors, Ent. From Garage To Inside Home, No Sidewalk ,Child Safe Road . Close To School, Plaza & Public Transit..',
-			summary: {
-				property_type: 'Single Family',
-				building_type: 'Row / Townhouse',
-				storeys: 2,
-				community_name: 'Sandringham-Wellington',
-				title: 'Freehold',
-				land_size: '26.08 x 105.61 FT ; *Ravine Lot*',
-				annual_property_taxes: 4687.29,
-				parking_type: 'Garage',
-				listed_time: '26 minutes',
-			},
-			building: {
-				bedrooms: 4,
-				bathrooms: 3,
-				interior_features: {
-					basement_features: 'Walk out',
-					basement_type: 'N/A (Unfinished)',
-				},
-				building_features: {
-					features: 'Ravine',
-					style: 'Attached',
-				},
-				heating_cooling: {
-					cooling: 'Central air conditioning',
-					heating: 'Forced air (Natural gas)',
-				},
-				exterior_features: {
-					exterior_finish: 'Brick',
-				},
-				neighbourhood_features: {
-					amenities_nearby: 'Hospital, Park, Place of Worship, Public Transit',
-				},
-				parking: 2,
-			},
-		},
-		{
-			id: 2,
-			images: ['/assets/images/temp/temp-property-02.jpg'],
-			headline: 'Reside on Richmond2',
-			featured: true,
-			featured_title: 'Platinum Access',
-			listing_type: 'sale',
-			listing_by_title: 'Development by:',
-			listing_by: 'Owner',
-			address: '123 Main St',
-			city: 'Toronto',
-			province: 'ON',
-			postal_code: 'M4Y 1T5',
-			price_title: 'Asking price',
-			price: 500000,
-			move_in_date: 'Dec 1st',
-			description:
-				'Beautiful & Spacious 4 Bedrooms End unit Townhouse W/Walk-Out Basement *North-Facing* Backing On To Ravine * Feels Like A Semi-Detach. Great Layout, Separate Fm & Liv. Rm, Bright & Spacious Kitchen W/Granite Counter Top, S/S Appliances. 4 Good Size Bdrms. Master Brm W/5Pc-Ensuite W/I Closet. Laminate Floors, Ent. From Garage To Inside Home, No Sidewalk ,Child Safe Road . Close To School, Plaza & Public Transit..',
-			summary: {
-				property_type: 'Single Family',
-				building_type: 'Row / Townhouse',
-				storeys: 2,
-				community_name: 'Sandringham-Wellington',
-				title: 'Freehold',
-				land_size: '26.08 x 105.61 FT ; *Ravine Lot*',
-				annual_property_taxes: 4687.29,
-				parking_type: 'Garage',
-				listed_time: '26 minutes',
-			},
-			building: {
-				bedrooms: 4,
-				bathrooms: 3,
-				interior_features: {
-					basement_features: 'Walk out',
-					basement_type: 'N/A (Unfinished)',
-				},
-				building_features: {
-					features: 'Ravine',
-					style: 'Attached',
-				},
-				heating_cooling: {
-					cooling: 'Central air conditioning',
-					heating: 'Forced air (Natural gas)',
-				},
-				exterior_features: {
-					exterior_finish: 'Brick',
-				},
-				neighbourhood_features: {
-					amenities_nearby: 'Hospital, Park, Place of Worship, Public Transit',
-				},
-			},
-		},
-		{
-			id: 3,
-			images: ['/assets/images/temp/temp-property-02.jpg'],
-			headline: 'Reside on Richmond2',
-			listing_type: 'sale',
-			listing_by_title: 'Development by:',
-			listing_by: 'Owner',
-			address: '123 Main St',
-			city: 'Toronto',
-			province: 'ON',
-			postal_code: 'M4Y 1T5',
-			price_title: 'Asking price',
-			price: 500000,
-			move_in_date: 'Dec 1st',
-			description:
-				'Beautiful & Spacious 4 Bedrooms End unit Townhouse W/Walk-Out Basement *North-Facing* Backing On To Ravine * Feels Like A Semi-Detach. Great Layout, Separate Fm & Liv. Rm, Bright & Spacious Kitchen W/Granite Counter Top, S/S Appliances. 4 Good Size Bdrms. Master Brm W/5Pc-Ensuite W/I Closet. Laminate Floors, Ent. From Garage To Inside Home, No Sidewalk ,Child Safe Road . Close To School, Plaza & Public Transit..',
-			summary: {
-				property_type: 'Single Family',
-				building_type: 'Row / Townhouse',
-				storeys: 2,
-				community_name: 'Sandringham-Wellington',
-				title: 'Freehold',
-				land_size: '26.08 x 105.61 FT ; *Ravine Lot*',
-				annual_property_taxes: 4687.29,
-				parking_type: 'Garage',
-				listed_time: '26 minutes',
-			},
-			building: {
-				bedrooms: '4+1',
-				bathrooms: '3+1',
-				interior_features: {
-					basement_features: 'Walk out',
-					basement_type: 'N/A (Unfinished)',
-				},
-				building_features: {
-					features: 'Ravine',
-					style: 'Attached',
-				},
-				heating_cooling: {
-					cooling: 'Central air conditioning',
-					heating: 'Forced air (Natural gas)',
-				},
-				exterior_features: {
-					exterior_finish: 'Brick',
-				},
-				neighbourhood_features: {
-					amenities_nearby: 'Hospital, Park, Place of Worship, Public Transit',
-				},
-				parking: 2,
-			},
-		},
-		{
-			id: 4,
-			images: ['/assets/images/temp/temp-property-02.jpg'],
-			headline: 'Reside on Richmond2',
-			featured: true,
-			featured_title: 'Platinum Access',
-			listing_type: 'sale',
-			listing_by_title: 'Development by:',
-			listing_by: 'Owner',
-			address: '123 Main St',
-			city: 'Toronto',
-			province: 'ON',
-			postal_code: 'M4Y 1T5',
-			price_title: 'Asking price',
-			price: '500000,000/month',
-			move_in_date: 'Dec 1st',
-			description:
-				'Beautiful & Spacious 4 Bedrooms End unit Townhouse W/Walk-Out Basement *North-Facing* Backing On To Ravine * Feels Like A Semi-Detach. Great Layout, Separate Fm & Liv. Rm, Bright & Spacious Kitchen W/Granite Counter Top, S/S Appliances. 4 Good Size Bdrms. Master Brm W/5Pc-Ensuite W/I Closet. Laminate Floors, Ent. From Garage To Inside Home, No Sidewalk ,Child Safe Road . Close To School, Plaza & Public Transit..',
-			summary: {
-				property_type: 'Single Family',
-				building_type: 'Row / Townhouse',
-				storeys: 2,
-				community_name: 'Sandringham-Wellington',
-				title: 'Freehold',
-				land_size: '26.08 x 105.61 FT ; *Ravine Lot*',
-				annual_property_taxes: 4687.29,
-				parking_type: 'Garage',
-				listed_time: '26 minutes',
-			},
-			building: {
-				interior_features: {
-					basement_features: 'Walk out',
-					basement_type: 'N/A (Unfinished)',
-				},
-				building_features: {
-					features: 'Ravine',
-					style: 'Attached',
-				},
-				heating_cooling: {
-					cooling: 'Central air conditioning',
-					heating: 'Forced air (Natural gas)',
-				},
-				exterior_features: {
-					exterior_finish: 'Brick',
-				},
-				neighbourhood_features: {
-					amenities_nearby: 'Hospital, Park, Place of Worship, Public Transit',
-				},
-				parking: 10000000,
-			},
-		},
-	]
+	const { PropertyData } = usePropertyData()
+	console.log('PropertyData: ', PropertyData)
+	if (!PropertyData) {
+		return <div>Loading...</div>
+	}
 	return (
 		<>
+			{/* <pre>{JSON.stringify(jsonData, null, 2)}</pre> */}
 			<section
 				className={`registration_container ${styles.registration_container}`}
 			>
@@ -221,7 +20,7 @@ function PropertiesList() {
 					<ul
 						className={`card_list card_list_properties ${styles.card_list} ${styles.card_list_properties}`}
 					>
-						{properties.map((property, index) => (
+						{PropertyData.map((property, index) => (
 							<li key={index}>
 								<PropertyCard property={property} />
 							</li>

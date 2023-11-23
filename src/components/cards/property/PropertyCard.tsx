@@ -1,16 +1,18 @@
+// PropertyCard.tsx
 import styles from './styles.module.scss'
 import { useDispatch, useSelector } from 'react-redux'
 import { RootState } from '../../../state/store'
 import { toggleFavorite } from '../../../state/property_favorites/PropertyFavoritesSlice'
-// import { Property_Interface } from '../../../interfaces/property'
 
 function PropertyCard({ property }: any) {
 	function numberWithCommas(x: number) {
 		return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
 	}
 
-	const favorites = useSelector(
-		(state: RootState) => state.PropertyFavorites.value
+	const favorites = useSelector((state: RootState) =>
+		state.PropertyFavorites.value.length
+			? state.PropertyFavorites.value
+			: JSON.parse(localStorage.getItem('PropertyFavorites') || '[]')
 	)
 	const dispatch = useDispatch()
 
@@ -40,9 +42,7 @@ function PropertyCard({ property }: any) {
 						<i
 							className={`icon icon_circle icon_heart ${styles.icon_heart} ${
 								favorites.includes(property.id) && styles.favorited
-							}`} //${
-							// 	favorited === true && styles.favorited
-							// }`}
+							}`}
 						></i>
 					</div>
 					<h3>{property.headline}</h3>

@@ -1,5 +1,6 @@
 [
 	{
+		"id": 1,
 		"images": ["/assets/images/temp/temp-property-02.jpg"],
 		"headline": "Reside on Richmond1",
 		"featured": true,
@@ -51,6 +52,7 @@
 		}
 	},
 	{
+		"id": 2,
 		"images": ["/assets/images/temp/temp-property-02.jpg"],
 		"headline": "Reside on Richmond2",
 		"featured": true,
@@ -101,6 +103,7 @@
 		}
 	},
 	{
+		"id": 3,
 		"images": ["/assets/images/temp/temp-property-02.jpg"],
 		"headline": "Reside on Richmond2",
 		"listing_type": "sale",
@@ -150,6 +153,7 @@
 		}
 	},
 	{
+		"id": 4,
 		"images": ["/assets/images/temp/temp-property-02.jpg"],
 		"headline": "Reside on Richmond2",
 		"featured": true,
