@@ -14,7 +14,7 @@ const PropertyFavoritesSlice = createSlice({
 		toggleFavorite: (state, action) => {
 			const index = state.value.indexOf(action.payload)
 			if (index > -1) {
-				state.value.splice(index, action.payload)
+				state.value.splice(index, 1)
 			} else {
 				state.value.push(action.payload)
 			}
