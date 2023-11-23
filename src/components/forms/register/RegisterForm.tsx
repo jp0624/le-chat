@@ -42,8 +42,9 @@ function RegisterForm() {
 				<div className={`${styles.form_group} size_50`}>
 					<p>Interested In</p>
 					<div className={`${styles.register_types}`}>
-						{registerTypes.map((type) => (
+						{registerTypes.map((type, index) => (
 							<label
+								key={index}
 								htmlFor={'register_' + type}
 								className={`${
 									registerType === 'register_' + type && styles.active

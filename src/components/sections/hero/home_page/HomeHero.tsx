@@ -1,5 +1,5 @@
 import PropertySearch from '../../../forms/property_search/PropertySearch'
-import SlideShow from '../../slide_show/SlideShow'
+import SlideShow from '../background_slideshow/SlideShow'
 import styles from './styles.module.scss'
 
 function HomeHero() {

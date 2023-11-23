@@ -1,0 +1,8 @@
+.featured_container {
+	// height: 10rem;
+	.row {
+		& > div {
+			width: 100%;
+		}
+	}
+}

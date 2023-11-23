@@ -1,12 +1,20 @@
 import styles from './styles.module.scss'
+// import { useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { RootState } from '../../../state/store'
+import { toggleFavorite } from '../../../state/property_favorites/PropertyFavoritesSlice'
 // import { Property_Interface } from '../../../interfaces/property'
 
 function PropertyCard({ property }: any) {
-	console.log('property: ', property)
-
+	// const [favorited, setFavorited] = useState(false)
 	function numberWithCommas(x: number) {
 		return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
 	}
+
+	const favorites = useSelector(
+		(state: RootState) => state.PropertyFavorites.value
+	)
+	const dispatch = useDispatch()
 
 	return (
 		<>
@@ -22,6 +30,23 @@ function PropertyCard({ property }: any) {
 				<div
 					className={`card_property_details ${styles.card_property_details}`}
 				>
+					<div
+						className={`property_favorite ${styles.property_favorite} `}
+						onClick={() => dispatch(toggleFavorite(property.id))} //setFavorited(favorited ? false : true)}
+						title={`${
+							favorites.includes(property.id) && styles.favorited
+								? 'Click to Remove from Favorites'
+								: 'Click to Add to Favorites'
+						}`}
+					>
+						<i
+							className={`icon icon_circle icon_heart ${styles.icon_heart} ${
+								favorites.includes(property.id) && styles.favorited
+							}`} //${
+							// 	favorited === true && styles.favorited
+							// }`}
+						></i>
+					</div>
 					<h3>{property.headline}</h3>
 					<h4>${numberWithCommas(property.price)}</h4>
 					<p>

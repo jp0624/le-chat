@@ -20,8 +20,9 @@ function PropertySearch() {
 						placeholder='Location, Developer, Development, etc'
 					/>
 					<div className={`${styles.search_types}`}>
-						{searchTypes.map((type) => (
+						{searchTypes.map((type, index) => (
 							<label
+								key={index}
 								htmlFor={'search_' + type}
 								className={`${
 									searchType === 'search_' + type && styles.active

@@ -4,6 +4,7 @@
 	width: 100%;
 	text-align: left;
 	cursor: pointer;
+	position: relative;
 	transition: all 0.25s ease-in-out;
 	&:hover {
 		box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
@@ -76,33 +77,49 @@
 					}
 				}
 			}
-			i {
-				display: inline-flex;
-				height: 36px;
-				width: 36px;
-				background-color: #b40101;
+		}
+		.property_favorite {
+			position: absolute;
+			top: -0.5rem;
+			right: -1.5rem;
+		}
+		i {
+			display: inline-flex;
+			height: 36px;
+			width: 36px;
+			background-color: #b40101;
+			&:before {
+				height: 20px;
+				width: 20px;
+				background-color: #fff;
+			}
+			&.icon_bedroom {
 				&:before {
-					height: 20px;
-					width: 20px;
+					-webkit-mask-image: url('/assets/images/icons/icon-bedroom.svg');
+					mask-image: url('/assets/images/icons/icon-bedroom.svg');
+				}
+			}
+			&.icon_bathroom {
+				&:before {
+					-webkit-mask-image: url('/assets/images/icons/icon-bathroom.svg');
+					mask-image: url('/assets/images/icons/icon-bathroom.svg');
+				}
+			}
+			&.icon_parking {
+				&:before {
+					-webkit-mask-image: url('/assets/images/icons/icon-car.svg');
+					mask-image: url('/assets/images/icons/icon-car.svg');
+				}
+			}
+			&.icon_heart {
+				background-color: #999;
+				&:before {
 					background-color: #fff;
+					-webkit-mask-image: url('/assets/images/icons/icon-heart.svg');
+					mask-image: url('/assets/images/icons/icon-heart.svg');
 				}
-				&.icon_bedroom {
-					&:before {
-						-webkit-mask-image: url('/assets/images/icons/icon-bedroom.svg');
-						mask-image: url('/assets/images/icons/icon-bedroom.svg');
-					}
-				}
-				&.icon_bathroom {
-					&:before {
-						-webkit-mask-image: url('/assets/images/icons/icon-bathroom.svg');
-						mask-image: url('/assets/images/icons/icon-bathroom.svg');
-					}
-				}
-				&.icon_parking {
-					&:before {
-						-webkit-mask-image: url('/assets/images/icons/icon-car.svg');
-						mask-image: url('/assets/images/icons/icon-car.svg');
-					}
+				&.favorited {
+					background-color: #b40101;
 				}
 			}
 		}
