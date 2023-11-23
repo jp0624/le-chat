@@ -19,6 +19,7 @@ function PropertyCard({ property }: any) {
 			<div
 				className={`card card_property ${styles.card} ${styles.card_property}`}
 			>
+				<pre>{favorites}</pre>
 				<figure>
 					<img
 						src={property.images[0]}
