@@ -1,4 +1,4 @@
-import PropertyCard from '../../../cards/property/PropertyCard'
+import PropertyCard from '../../../cards/propertyCards/standardCard/PropertyCard'
 import styles from './styles.module.scss'
 
 import { usePropertyData } from '../../../../data/PropertyData/PropertyDataContext'
@@ -6,7 +6,6 @@ import { usePropertyData } from '../../../../data/PropertyData/PropertyDataConte
 
 function PropertiesList() {
 	const { PropertyData } = usePropertyData()
-	console.log('PropertyData: ', PropertyData)
 	if (!PropertyData) {
 		return <div>Loading...</div>
 	}

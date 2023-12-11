@@ -1,8 +1,21 @@
 .featured_container {
-	// height: 10rem;
+	position: relative;
+	overflow: hidden;
+	border-bottom: 4px solid #b40101;
+
 	.row {
-		& > div {
-			width: 100%;
+		justify-content: right;
+		align-items: center;
+	}
+	.slideshow_container {
+		position: relative;
+		width: 100%;
+		list-style: none;
+		.featured_item {
+			height: 25rem;
+			overflow: hidden;
+			height: 100%;
+			position: relative;
 		}
 	}
 }

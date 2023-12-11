@@ -1,8 +1,8 @@
 // PropertyCard.tsx
 import styles from './styles.module.scss'
 import { useDispatch, useSelector } from 'react-redux'
-import { RootState } from '../../../state/store'
-import { toggleFavorite } from '../../../state/property_favorites/PropertyFavoritesSlice'
+import { RootState } from '../../../../state/store'
+import { toggleFavorite } from '../../../../state/property_favorites/PropertyFavoritesSlice'
 
 function PropertyCard({ property }: any) {
 	function numberWithCommas(x: number) {
@@ -45,14 +45,18 @@ function PropertyCard({ property }: any) {
 							}`}
 						></i>
 					</div>
-					<h3>{property.headline}</h3>
+					<h3>{property.headline ? property.headline : property.address}</h3>
 					<h4>${numberWithCommas(property.price)}</h4>
-					<p>
-						{property.address !== '' && property.address},{' '}
-						{property.city !== '' && property.city},{' '}
-						{property.province !== '' && property.province},{' '}
-						{property.postal_code !== '' && property.postal_code}
-					</p>
+					{property.address !== '' && !property.headline ? (
+						''
+					) : (
+						<p>
+							{property.address !== '' && property.address},{' '}
+							{property.city !== '' && property.city},{' '}
+							{property.province !== '' && property.province},{' '}
+							{property.postal_code !== '' && property.postal_code}
+						</p>
+					)}
 					<p>{property.description !== '' && property.description}, </p>
 					<ul className={`features_list ${styles.features_list}`}>
 						{property.building && property.building.bedrooms && (

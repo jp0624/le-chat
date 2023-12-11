@@ -105,7 +105,7 @@
 	{
 		"id": 3,
 		"images": ["/assets/images/temp/temp-property-02.jpg"],
-		"headline": "Reside on Richmond2",
+		"headline": "",
 		"listing_type": "sale",
 		"listing_by_title": "Development by:",
 		"listing_by": "Owner",
@@ -199,7 +199,7 @@
 			"neighbourhood_features": {
 				"amenities_nearby": "Hospital, Park, Place of Worship, Public Transit"
 			},
-			"parking": 10000000
+			"parking": 1
 		}
 	}
 ]
