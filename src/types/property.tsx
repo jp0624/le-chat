@@ -1,6 +1,6 @@
 export type string_number_obj = [string | number]
 
-export type Summary_Interface = {
+export interface Summary_Interface {
 	property_type: string
 	building_type: string
 	storeys: number
@@ -11,7 +11,7 @@ export type Summary_Interface = {
 	parking_type: string
 	listed_time: string
 }
-export type Building_Interface = {
+export interface Building_Interface {
 	bedrooms: number
 	bathrooms: number
 	// interior_features: string_number_obj
@@ -21,8 +21,9 @@ export type Building_Interface = {
 	// neighbourhood_features: string_number_obj
 	parking: number
 }
-export type Property_Interface = {
+export interface Property_Interface {
 	property: {
+		id: number
 		images: string[]
 		headline: string
 		featured: boolean

@@ -1,12 +1,11 @@
 import PropertyCard from '../../../cards/propertyCards/standardCard/PropertyCard'
 import styles from './styles.module.scss'
-import { Property_Interface } from '../../../../types/property'
 
 import { usePropertyData } from '../../../../data/PropertyData/PropertyDataContext'
-// import { Property_Interface } from '../../../../interfaces/property'
 
 function PropertiesList() {
 	const { PropertyData } = usePropertyData()
+	console.log('PropertyData: ', PropertyData)
 	if (!PropertyData) {
 		return <div>Loading...</div>
 	}
@@ -20,7 +19,7 @@ function PropertiesList() {
 					<ul
 						className={`card_list card_list_properties ${styles.card_list} ${styles.card_list_properties}`}
 					>
-						{PropertyData.map((property: Property_Interface, index: number) => (
+						{PropertyData.map((property: any, index: number) => (
 							<li key={index}>
 								<PropertyCard property={property} />
 							</li>
