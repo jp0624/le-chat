@@ -155,6 +155,24 @@
 					mask-image: url('/assets/images/icons/icon-car.svg');
 				}
 			}
+			&.icon_occupancy {
+				&:before {
+					-webkit-mask-image: url('/assets/images/icons/icon-truck.svg');
+					mask-image: url('/assets/images/icons/icon-truck.svg');
+				}
+			}
+			&.icon_cost {
+				&:before {
+					-webkit-mask-image: url('/assets/images/icons/icon-dollar.svg');
+					mask-image: url('/assets/images/icons/icon-dollar.svg');
+				}
+			}
+			&.icon_location {
+				&:before {
+					-webkit-mask-image: url('/assets/images/icons/icon-location.svg');
+					mask-image: url('/assets/images/icons/icon-location.svg');
+				}
+			}
 			&.icon_heart {
 				background-color: #999;
 				&:before {

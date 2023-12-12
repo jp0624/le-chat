@@ -60,7 +60,7 @@ function FeaturedCard({ property }: any) {
 						>
 							<h4>
 								<i
-									className={`icon icon_circle icon_bedroom ${styles.icon_bedroom}`}
+									className={`icon icon_circle icon_location ${styles.icon_location}`}
 								></i>
 								Location
 							</h4>
@@ -77,11 +77,11 @@ function FeaturedCard({ property }: any) {
 						>
 							<h4>
 								<i
-									className={`icon icon_circle icon_bedroom ${styles.icon_bedroom}`}
+									className={`icon icon_circle icon_bedroom ${styles.icon_cost}`}
 								></i>
-								Prices From
+								{property.price_title}
 							</h4>
-							<span>{numberWithCommas(property.price)}</span>
+							<span>${numberWithCommas(property.price)}</span>
 						</li>
 						<li
 							className={`features_list_bedrooms ${styles.features_list_bedrooms}`}

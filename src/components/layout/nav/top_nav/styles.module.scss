@@ -32,7 +32,11 @@
 	display: inline-block;
 	background-size: cover;
 	margin: 0 1rem 0 0;
+	background: none;
 	&_live_chat {
 		background-image: url('/assets/images/icons/live-chat-white.svg');
+		&:before {
+			display: none;
+		}
 	}
 }
