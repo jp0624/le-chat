@@ -2,7 +2,7 @@
 import { useEffect } from 'react'
 import { usePropertyData } from './PropertyDataContext'
 
-const PropertyDataFetcher = ({ url }) => {
+const PropertyDataFetcher = ({ url }: any) => {
 	const { PropertyData, setPropertyData } = usePropertyData()
 
 	useEffect(() => {

@@ -6,10 +6,11 @@ import {
 	ReactNode,
 	useEffect,
 } from 'react'
+import { Property_Interface } from '../../types/property'
 
 interface PropertyDataContextProps {
-	PropertyData: any // Adjust the type based on your JSON structure
-	setPropertyData: (data: any) => void // Adjust the type based on your JSON structure
+	PropertyData: Property_Interface
+	setPropertyData: (data: Property_Interface[]) => void // Adjust the type based on your JSON structure
 }
 
 const PropertyDataContext = createContext<PropertyDataContextProps | undefined>(
@@ -46,7 +47,7 @@ export const PropertyDataProvider: React.FC<{ children: ReactNode }> = ({
 					...PropertyData,
 					properties: [
 						...PropertyData.properties,
-						...newIdsToAdd.map((id) => ({
+						...newIdsToAdd.map((id: number) => ({
 							id /* other properties as needed */,
 						})),
 					],
