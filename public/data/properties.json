@@ -181,6 +181,8 @@
 			"listed_time": "26 minutes"
 		},
 		"building": {
+			"bedrooms": "",
+			"bathrooms": "3+1",
 			"interior_features": {
 				"basement_features": "Walk out",
 				"basement_type": "N/A (Unfinished)"

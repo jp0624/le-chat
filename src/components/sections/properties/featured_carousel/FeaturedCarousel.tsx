@@ -3,7 +3,6 @@ import { Slide } from 'react-slideshow-image'
 import 'react-slideshow-image/dist/styles.css'
 import FeaturedCard from '../../../cards/propertyCards/featuredCard/FeaturedCard'
 import { usePropertyData } from '../../../../data/PropertyData/PropertyDataContext'
-import { Property_Interface } from '../../../../types/property'
 
 type SlideShowImage = {
 	url: string
@@ -35,13 +34,11 @@ function FeaturedCarousel({
 							transitionDuration={transitionDuration}
 							pauseOnHover={false}
 						>
-							{PropertyData.map(
-								(property: Property_Interface, index: number) => (
-									<li key={index}>
-										<FeaturedCard property={property} />
-									</li>
-								)
-							)}
+							{PropertyData.map((property: [], index: number) => (
+								<li key={index}>
+									<FeaturedCard property={property} />
+								</li>
+							))}
 						</Slide>
 					</ul>
 				</div>

@@ -2,11 +2,16 @@ import { useState } from 'react'
 import styles from './styles.module.scss'
 
 function RegisterForm() {
-	const [registerType, setRegisterType] = useState('register_buying')
+	const [registerType, setRegisterType] = useState('buying')
+	const [isRealtor, setIsRealtor] = useState('no')
 
 	const registerTypes = ['buying', 'selling', 'leasing']
-	function toggleRadio(value: string) {
+	function toggleRegisterTypesRadio(value: string) {
 		setRegisterType(value)
+	}
+	const isRealtorType = ['yes', 'no']
+	function toggleIsRealtorRadio(value: string) {
+		setIsRealtor(value)
 	}
 	return (
 		<>
@@ -33,30 +38,49 @@ function RegisterForm() {
 						type='phone'
 						placeholder='Phone Number'
 					/>
-					<input
-						className={`size_100 ${styles.size_100}`}
-						type='text'
-						placeholder='Are You A Realtor?'
-					/>
+					<div className={`${styles.realtor_boolean}`}>
+						<p>Are you a Realtor?</p>
+						<div className={`${styles.realtor_types}`}>
+							{isRealtorType.map((type, index) => (
+								<label
+									key={index}
+									htmlFor={'realtor_' + type}
+									className={`${isRealtor === type && styles.active} size_50 ${
+										styles.size_50
+									}`}
+								>
+									<input
+										onChange={() => toggleIsRealtorRadio(type)}
+										type='radio'
+										id={`realtor_${type}`}
+										name='realtor_type'
+										value={`realtor_${type}`}
+										checked={isRealtor === type && true}
+									/>
+									<span>{type}</span>
+								</label>
+							))}
+						</div>
+					</div>
 				</div>
 				<div className={`${styles.form_group} size_50`}>
-					<p>Interested In</p>
+					<p>Interested In:</p>
 					<div className={`${styles.register_types}`}>
 						{registerTypes.map((type, index) => (
 							<label
 								key={index}
 								htmlFor={'register_' + type}
-								className={`${
-									registerType === 'register_' + type && styles.active
-								} size_33 ${styles.size_33}`}
+								className={`${registerType === type && styles.active} size_33 ${
+									styles.size_33
+								}`}
 							>
 								<input
-									onChange={() => toggleRadio('register_' + type)}
+									onChange={() => toggleRegisterTypesRadio(type)}
 									type='radio'
 									id={`register_${type}`}
 									name='search_type'
 									value={`register_${type}`}
-									checked={registerType === 'register_' + type && true}
+									checked={registerType === type && true}
 								/>
 								<span>{type}</span>
 							</label>

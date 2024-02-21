@@ -80,7 +80,7 @@
 		.features_list {
 			margin: 2rem;
 			list-style: none;
-			margin: 1em 0;
+			margin: 0;
 			padding: 0;
 			gap: 0 1rem;
 			display: grid;
@@ -179,8 +179,13 @@
 			}
 			&.icon_heart {
 				background-color: #999;
+				height: 36px;
+				width: 36px;
+				margin-right: 1rem;
+				margin-left: 0.5rem;
 				&:before {
-					background-color: #fff;
+					height: 24px;
+					width: 24px;
 					-webkit-mask-image: url('/assets/images/icons/icon-heart.svg');
 					mask-image: url('/assets/images/icons/icon-heart.svg');
 				}

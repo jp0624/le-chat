@@ -17,6 +17,9 @@ form {
 			text-align: left;
 			font-size: 1.25rem;
 		}
+		textarea {
+			height: 11.25rem;
+		}
 		input,
 		label {
 			margin: 0.5em 0;
@@ -34,7 +37,7 @@ form {
 			}
 			&.size_50 {
 				margin: 0.5em;
-				width: calc(50% - 1.05rem);
+				width: calc(50% - 1.25rem);
 			}
 			&.size_100 {
 				margin: 0.5em;
@@ -43,7 +46,8 @@ form {
 		}
 	}
 }
-.register_types {
+.register_types,
+.realtor_types {
 	width: 100%;
 	text-align: left;
 	label {

@@ -2,12 +2,12 @@ import { useState } from 'react'
 import styles from './styles.module.scss'
 
 function PropertySearch() {
-	const [searchType, setSearchType] = useState('search_buy')
+	const [propertyType, setPropertyType] = useState('buy')
 
-	const searchTypes = ['buy', 'lease']
+	const PropertyTypes = ['buy', 'lease']
 
-	function toggleRadio(value: string) {
-		setSearchType(value)
+	function togglePropertyTypeRadio(value: string) {
+		setPropertyType(value)
 	}
 	return (
 		<>
@@ -20,21 +20,19 @@ function PropertySearch() {
 						placeholder='Location, Developer, Development, etc'
 					/>
 					<div className={`${styles.search_types}`}>
-						{searchTypes.map((type, index) => (
+						{PropertyTypes.map((type, index) => (
 							<label
 								key={index}
 								htmlFor={'search_' + type}
-								className={`${
-									searchType === 'search_' + type && styles.active
-								}`}
+								className={`${propertyType === type && styles.active}`}
 							>
 								<input
-									onChange={() => toggleRadio('search_' + type)}
+									onChange={() => togglePropertyTypeRadio(type)}
 									type='radio'
 									id={`search_${type}`}
 									name='search_type'
 									value='buy'
-									checked={searchType === 'search_' + type && true}
+									checked={propertyType === type}
 								/>
 								<span>{type}</span>
 							</label>
